@@ -1,0 +1,97 @@
+/* /ui/rte-mini/rte-mini.css */
+.ri { border:1px solid rgba(255,255,255,.10); border-radius:10px; background:rgba(255,255,255,.03); }
+.ri-tools { display:flex; gap:6px; align-items:center; padding:6px; border-bottom:1px solid rgba(255,255,255,.10); }
+.ri-btn { height:28px; padding:0 8px; border:1px solid rgba(255,255,255,.12); border-radius:6px; background:transparent; color:#e8eef2; cursor:pointer; }
+.ri-btn:hover { background:rgba(255,255,255,.12); }
+.ri-trigger { width:28px; height:28px; border:1px solid rgba(255,255,255,.12); border-radius:6px; background:#94a3b8; cursor:pointer; }
+.ri-editor { min-height:120px; padding:10px; background:rgba(0,0,0,.15); border-radius:0 0 10px 10px; outline:none; }
+
+/* модалка палитры */
+.ri-modal-back { position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index:9999; }
+.ri-modal { background:#0b1220; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:12px; width:280px; }
+.ri-grid { display:grid; grid-template-columns:repeat(10, 22px); gap:8px; }
+.ri-swatch { width:22px; height:22px; border-radius:6px; border:1px solid rgba(255,255,255,.18); cursor:pointer; }
+#riColorBtn {
+  background: conic-gradient(
+    from 0deg,
+    red, orange, yellow, green, cyan, blue, purple, red
+  );
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+/* Стили для новых модальных окон */
+.ri-size-modal {
+  width: 200px;
+}
+
+.ri-size-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: #e8eef2;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ri-size-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.ri-heading-modal {
+  width: 200px;
+}
+
+.ri-heading-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: #e8eef2;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ri-heading-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.ri-heading-btn h1,
+.ri-heading-btn h2,
+.ri-heading-btn h3,
+.ri-heading-btn h4,
+.ri-heading-btn h5,
+.ri-heading-btn h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* Стили для кнопок форматирования */
+.ri-btn b, .ri-btn i, .ri-btn u, .ri-btn s {
+  pointer-events: none;
+}
+/* RTE: делаем ту же нормализацию, что и на сцене */
+.ri-editor p,
+.ri-editor h1,
+.ri-editor h2,
+.ri-editor h3,
+.ri-editor h4,
+.ri-editor h5,
+.ri-editor h6,
+.ri-editor ul,
+.ri-editor ol {
+  margin: 0;
+  padding: 0;
+}
+
+.ri-editor li { margin: 0 0 .35em; }
+.ri-editor p + p { margin-top: .35em; }
+

@@ -1,0 +1,161 @@
+/* Модальное окно экспорта */
+.export-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.export-backdrop.hidden {
+    display: none;
+}
+
+.export-modal {
+    width: 600px;
+    max-width: 90vw;
+    max-height: 80vh;
+    background: #0f1622;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.export-modal__header {
+    padding: 20px;
+    border-bottom: 1px solid #1f2b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.export-modal__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.export-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #2a3441;
+    background: #1a2533;
+    color: #9fb2c6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+.export-close:hover {
+    background: #2a3441;
+    color: #ffffff;
+}
+
+.export-modal__body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.export-section {
+    margin-bottom: 24px;
+}
+
+.export-label {
+    display: block;
+    color: #9fb2c6;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.export-pages {
+    background: #111925;
+    border: 1px solid #213247;
+    border-radius: 10px;
+    padding: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.export-page-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.export-page-item:hover {
+    background: rgba(46,168,255,.1);
+}
+
+.export-page-item input {
+    margin-right: 10px;
+}
+
+.export-checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.export-checkbox {
+    margin-right: 10px;
+}
+
+.export-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #2a3441;
+    background: #1a2533;
+    color: #e4eef9;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.export-btn:hover {
+    background: #2a3441;
+}
+
+.export-btn.primary {
+    background: #2ea8ff;
+    border-color: #1e98ef;
+    color: #ffffff;
+}
+
+.export-btn.primary:hover {
+    background: #1e98ef;
+}
+
+.export-btn.small {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.export-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.export-status {
+    padding: 12px;
+    background: rgba(46,168,255,.1);
+    border: 1px solid #2ea8ff;
+    border-radius: 8px;
+    color: #2ea8ff;
+    margin-top: 12px;
+}

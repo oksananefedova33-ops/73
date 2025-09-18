@@ -1,0 +1,18 @@
+php_flag file_uploads On
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# pass-through editor/admin и существующих файлов/папок
+RewriteCond %{REQUEST_URI} ^/(editor|admin)/ [OR]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Главная -> index.php
+RewriteRule ^$ index.php [L]
+
+# /slug -> index.php?slug=slug
+RewriteRule ^([^/]+)/?$ index.php?slug=$1 [QSA,L]
+</IfModule>
